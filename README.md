@@ -5,6 +5,7 @@ The two sources of parameters are: the query string in the URL of the main SWF f
 The problem is that a bad person can inject ome JavaScript code via swf url, for example:
 https://soroush.secproject.com/blog/2011/03/flash-externalinterface-call-javascript-injection-%E2%80%93-can-make-the-websites-vulnerable-to-xss/
 
-So, here is the function to exclude URL query parameters from loaderInfo.parameters and use only flashVars.
+Usage: link `FilterFlashVarsLibrary.swc` library from `bin` folder and use its`filterFlashVars` method.
 
-See the [demo](http://im-saxo.github.io/filterFlashVars/bin-release/filterFlashVars.html)
+See the [demo](http://im-saxo.github.io/FilterFlashVars/sources/filterFlashVarsExample/bin-release/filterFlashVars.html)
+
