@@ -64,7 +64,7 @@
 	        <div id="flashContent">
 	            <p>
 	                To view this page ensure that Adobe Flash Player version 
-	                11.4.0 or greater is installed. 
+	                10.2.0 or greater is installed. 
 	            </p>
 	            <script type="text/javascript"> 
 	                var pageHost = ((document.location.protocol == "https:") ? "https://" : "http://"); 
@@ -78,7 +78,7 @@
         (function () {
         	function _embed (flashvars, query) {
         		// For version detection, set to min. required Flash Player version, or 0 (or 0.0.0), for no version detection. 
-	            var swfVersionStr = "11.4.0";
+	            var swfVersionStr = "10.2.0";
 	            // To use express install, set to playerProductInstall.swf, otherwise the empty string. 
 	            var xiSwfUrlStr = "playerProductInstall.swf";
 	            if (!flashvars) flashvars = {};
@@ -89,11 +89,11 @@
 	            params.allowscriptaccess = "sameDomain";
 	            params.allowfullscreen = "true";
 	            var attributes = {};
-	            attributes.id = "filterFlashVars";
-	            attributes.name = "filterFlashVars";
+	            attributes.id = "filterFlashVarsExample";
+	            attributes.name = "filterFlashVarsExample";
 	            attributes.align = "middle";
 				swfobject.embedSWF(
-	                "filterFlashVars.swf?" + encodeURI(query), "flashContent", 
+	                "filterFlashVarsExample.swf?" + encodeURI(query), "flashContent", 
 	                "100%", "100%", 
 	                swfVersionStr, xiSwfUrlStr, 
 	                flashvars, params, attributes);
@@ -116,7 +116,7 @@
         		}
         		query = queryInput.value;
 
-        		swfobject.removeSWF("filterFlashVars");
+        		swfobject.removeSWF("filterFlashVarsExample");
         		flashWrapper.appendChild((function () { 
         			var div = document.createElement("DIV");
         			div.id = "flashContent";
@@ -131,14 +131,14 @@
         </script>
         
         <noscript>
-            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="100%" height="100%" id="filterFlashVars">
-                <param name="movie" value="filterFlashVars.swf" />
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="100%" height="100%" id="filterFlashVarsExample">
+                <param name="movie" value="filterFlashVarsExample.swf" />
                 <param name="quality" value="high" />
                 <param name="bgcolor" value="#ffffff" />
                 <param name="allowScriptAccess" value="sameDomain" />
                 <param name="allowFullScreen" value="true" />
                 <!--[if !IE]>-->
-                <object type="application/x-shockwave-flash" data="filterFlashVars.swf" width="100%" height="100%">
+                <object type="application/x-shockwave-flash" data="filterFlashVarsExample.swf" width="100%" height="100%">
                     <param name="quality" value="high" />
                     <param name="bgcolor" value="#ffffff" />
                     <param name="allowScriptAccess" value="sameDomain" />
@@ -147,7 +147,7 @@
                 <!--[if gte IE 6]>-->
                     <p> 
                         Either scripts and active content are not permitted to run or Adobe Flash Player version
-                        11.4.0 or greater is not installed.
+                        10.2.0 or greater is not installed.
                     </p>
                 <!--<![endif]-->
                     <a href="http://www.adobe.com/go/getflashplayer">
