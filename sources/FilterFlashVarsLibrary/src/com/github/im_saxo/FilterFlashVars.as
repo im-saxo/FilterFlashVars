@@ -37,11 +37,18 @@ package com.github.im_saxo
             if (queryIndex > -1) {
                 var queryString:String = url.substring(queryIndex + 1),
                     params:Array = queryString.split("&"),
-                    paramParts:Array;
+                    paramParts:Array,
+					key: String;
                 params.forEach(function (param:String, index:int, array:Array):void {
                     if (param.length) {
                         paramParts = param.split("=");
-                        query[paramParts[0]] = paramParts.length == 2 ? paramParts[1] : null;
+						try {
+							key = decodeURIComponent(paramParts[0]);
+						}
+						catch (e:*) {
+							key = paramParts[0].replace(/%./, '');
+						}
+                        query[key] = paramParts.length == 2 ? paramParts[1] : null;
                     }
                 });
             }
