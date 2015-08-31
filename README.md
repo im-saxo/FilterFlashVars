@@ -7,5 +7,5 @@ https://soroush.secproject.com/blog/2011/03/flash-externalinterface-call-javascr
 
 Usage: link `FilterFlashVarsLibrary.swc` library from `bin` folder and use its`filterFlashVars` method.
 
-See the [demo](http://im-saxo.github.io/FilterFlashVars/sources/filterFlashVarsExample/bin-release/filterFlashVars.html)
+See the [demo](http://im-saxo.github.io/FilterFlashVars/sources/filterFlashVarsExample/bin-release/filterFlashVarsExample.html)
 
