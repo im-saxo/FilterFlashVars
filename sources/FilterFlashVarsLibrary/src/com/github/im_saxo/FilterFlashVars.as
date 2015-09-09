@@ -46,7 +46,7 @@ package com.github.im_saxo
 							key = decodeURIComponent(paramParts[0]);
 						}
 						catch (e:*) {
-							key = paramParts[0].replace(/%./, '');
+							key = paramParts[0].replace(/%[abcdef\d]?./g, '');
 						}
 						query[key] = paramParts.length == 2 ? paramParts[1] : null;
 					}
